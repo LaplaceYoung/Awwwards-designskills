@@ -1,0 +1,584 @@
+{
+  "generatedAt": "2026-03-27T17:18:13.345Z",
+  "sourceRequested": "live",
+  "sourceUsed": "live",
+  "requestedCount": 8,
+  "candidateCount": 8,
+  "notes": [],
+  "candidates": [
+    {
+      "detailUrl": "https://www.awwwards.com/sites/gq-ap-the-extraordinary-lab",
+      "sitePath": "/sites/gq-ap-the-extraordinary-lab",
+      "id": "gq-ap-the-extraordinary-lab",
+      "title": "GQ & AP The Extraordinary Lab",
+      "sourceTitle": "GQ & AP The Extraordinary Lab",
+      "author": "Immersive Garden",
+      "awardTags": [
+        "DEV",
+        "SOTD",
+        "New"
+      ],
+      "awardType": "SOTD",
+      "score": 7.74,
+      "overallScores": [
+        7.85,
+        7.24,
+        8.18,
+        7.96,
+        6.8,
+        8.6,
+        6,
+        7.4
+      ],
+      "freshnessDate": "2026-03-25",
+      "externalUrl": "https://www.gq.com/sponsored/story/the-extraordinary-lab",
+      "detailSignals": {
+        "scoreText": "7.74 /10",
+        "tooltipText": null,
+        "externalCandidates": [
+          {
+            "href": "https://www.gq.com/sponsored/story/the-extraordinary-lab",
+            "text": "Visit Site",
+            "className": "button button--medium--rounded",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 88
+          },
+          {
+            "href": "https://www.gq.com/sponsored/story/the-extraordinary-lab",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://www.gq.com/sponsored/story/the-extraordinary-lab",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://www.gq.com/sponsored/story/the-extraordinary-lab",
+            "text": "GQ & AP The Extraordinary Lab",
+            "className": "",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 20
+          }
+        ]
+      }
+    },
+    {
+      "detailUrl": "https://www.awwwards.com/sites/shed",
+      "sitePath": "/sites/shed",
+      "id": "shed",
+      "title": "Shed",
+      "sourceTitle": "Shed",
+      "author": "Isaac Powell",
+      "awardTags": [
+        "DEV",
+        "SOTD",
+        "New",
+        "video"
+      ],
+      "awardType": "SOTD",
+      "score": 7.64,
+      "overallScores": [
+        7.82,
+        7.55,
+        7.31,
+        7.81,
+        7,
+        7.8,
+        6.8,
+        7.8
+      ],
+      "freshnessDate": "2026-03-22",
+      "externalUrl": "https://shed.design/",
+      "detailSignals": {
+        "scoreText": "7.64 /10",
+        "tooltipText": null,
+        "externalCandidates": [
+          {
+            "href": "https://shed.design/",
+            "text": "Visit Site",
+            "className": "button button--medium--rounded",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 91
+          },
+          {
+            "href": "https://shed.design/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 63
+          },
+          {
+            "href": "https://shed.design/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 63
+          },
+          {
+            "href": "https://shed.design/",
+            "text": "",
+            "className": "figure-rollover__bt",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 56
+          },
+          {
+            "href": "https://shed.design/blog",
+            "text": "",
+            "className": "figure-rollover__bt",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 44
+          },
+          {
+            "href": "https://shed.design/",
+            "text": "Shed",
+            "className": "",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 23
+          }
+        ]
+      }
+    },
+    {
+      "detailUrl": "https://www.awwwards.com/sites/the-lookback",
+      "sitePath": "/sites/the-lookback",
+      "id": "the-lookback",
+      "title": "The Lookback",
+      "sourceTitle": "The Lookback",
+      "author": "Gil Huybrecht",
+      "awardTags": [
+        "DEV",
+        "SOTD",
+        "New"
+      ],
+      "awardType": "SOTD",
+      "score": 7.45,
+      "overallScores": [
+        7.57,
+        7.23,
+        7.52,
+        7.49,
+        7.2,
+        8.6,
+        6.8,
+        8
+      ],
+      "freshnessDate": "2026-03-26",
+      "externalUrl": "https://tlb.betteroff.studio/",
+      "detailSignals": {
+        "scoreText": "7.45 /10",
+        "tooltipText": null,
+        "externalCandidates": [
+          {
+            "href": "https://tlb.betteroff.studio/",
+            "text": "Visit Site",
+            "className": "button button--medium--rounded",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 88
+          },
+          {
+            "href": "https://tlb.betteroff.studio/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://tlb.betteroff.studio/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://tlb.betteroff.studio/",
+            "text": "The Lookback",
+            "className": "",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 20
+          }
+        ]
+      }
+    },
+    {
+      "detailUrl": "https://www.awwwards.com/sites/corentin-bernadou-portfolio",
+      "sitePath": "/sites/corentin-bernadou-portfolio",
+      "id": "corentin-bernadou-portfolio",
+      "title": "Corentin Bernadou Portfolio",
+      "sourceTitle": "Corentin Bernadou Portfolio",
+      "author": "Corentin Bernadou",
+      "awardTags": [
+        "DEV",
+        "SOTD",
+        "New"
+      ],
+      "awardType": "SOTD",
+      "score": 7.42,
+      "overallScores": [
+        7.51,
+        7.1,
+        7.64,
+        7.61,
+        7.6,
+        8.2,
+        6.6,
+        8
+      ],
+      "freshnessDate": "2026-03-24",
+      "externalUrl": "https://corentinbernadou.com/",
+      "detailSignals": {
+        "scoreText": "7.42 /10",
+        "tooltipText": null,
+        "externalCandidates": [
+          {
+            "href": "https://corentinbernadou.com/",
+            "text": "Visit Site",
+            "className": "button button--medium--rounded",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 88
+          },
+          {
+            "href": "https://corentinbernadou.com/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://corentinbernadou.com/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://corentinbernadou.com/",
+            "text": "Corentin Bernadou Portfolio",
+            "className": "",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 20
+          }
+        ]
+      }
+    },
+    {
+      "detailUrl": "https://www.awwwards.com/sites/unseen-studio-2025-wrapped",
+      "sitePath": "/sites/unseen-studio-2025-wrapped",
+      "id": "unseen-studio-2025-wrapped",
+      "title": "Unseen Studio 2025 Wrapped",
+      "sourceTitle": "Unseen Studio 2025 Wrapped",
+      "author": "Unseen Studio",
+      "awardTags": [
+        "DEV",
+        "SOTD",
+        "New",
+        "video"
+      ],
+      "awardType": "SOTD",
+      "score": 7.44,
+      "overallScores": [
+        7.44,
+        7.25,
+        7.56,
+        7.81,
+        6.6,
+        7.4,
+        6.8,
+        7.4
+      ],
+      "freshnessDate": "2026-03-23",
+      "externalUrl": "https://2025.unseen.co/",
+      "detailSignals": {
+        "scoreText": "7.44 /10",
+        "tooltipText": null,
+        "externalCandidates": [
+          {
+            "href": "https://2025.unseen.co/",
+            "text": "Visit Site",
+            "className": "button button--medium--rounded",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 91
+          },
+          {
+            "href": "https://2025.unseen.co/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 63
+          },
+          {
+            "href": "https://2025.unseen.co/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 63
+          },
+          {
+            "href": "https://2025.unseen.co/",
+            "text": "",
+            "className": "figure-rollover__bt",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 56
+          },
+          {
+            "href": "https://2025.unseen.co/",
+            "text": "",
+            "className": "figure-rollover__bt",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 56
+          },
+          {
+            "href": "https://2025.unseen.co/",
+            "text": "",
+            "className": "figure-rollover__bt",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 56
+          }
+        ]
+      }
+    },
+    {
+      "detailUrl": "https://www.awwwards.com/sites/fc-porto-memorial",
+      "sitePath": "/sites/fc-porto-memorial",
+      "id": "fc-porto-memorial",
+      "title": "FC Porto Memorial",
+      "sourceTitle": "FC Porto Memorial",
+      "author": "Significa",
+      "awardTags": [
+        "DEV",
+        "SOTD",
+        "New",
+        "2",
+        "video",
+        "3"
+      ],
+      "awardType": "SOTD",
+      "score": 7.27,
+      "overallScores": [
+        7.41,
+        6.8,
+        7.44,
+        7.84,
+        6.8,
+        7.6,
+        6.4,
+        7.4
+      ],
+      "freshnessDate": "2026-03-21",
+      "externalUrl": "https://memorial.fcporto.pt/",
+      "detailSignals": {
+        "scoreText": "7.27 /10",
+        "tooltipText": null,
+        "externalCandidates": [
+          {
+            "href": "https://memorial.fcporto.pt/",
+            "text": "Visit Site",
+            "className": "button button--medium--rounded",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 91
+          },
+          {
+            "href": "https://memorial.fcporto.pt/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 63
+          },
+          {
+            "href": "https://memorial.fcporto.pt/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 63
+          },
+          {
+            "href": "https://memorial.fcporto.pt/",
+            "text": "",
+            "className": "figure-rollover__bt",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 56
+          },
+          {
+            "href": "https://memorial.fcporto.pt/",
+            "text": "",
+            "className": "figure-rollover__bt",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 56
+          },
+          {
+            "href": "https://memorial.fcporto.pt/",
+            "text": "",
+            "className": "figure-rollover__bt",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 56
+          }
+        ]
+      }
+    },
+    {
+      "detailUrl": "https://www.awwwards.com/sites/stuff-by-kris-temmerman",
+      "sitePath": "/sites/stuff-by-kris-temmerman",
+      "id": "stuff-by-kris-temmerman",
+      "title": "Stuff by Kris Temmerman",
+      "sourceTitle": "Stuff by Kris Temmerman",
+      "author": "Kris Temmerman",
+      "awardTags": [
+        "DEV",
+        "SOTD",
+        "New",
+        "2"
+      ],
+      "awardType": "SOTD",
+      "score": 7.32,
+      "overallScores": [
+        7.24,
+        6.92,
+        8.03,
+        7.44,
+        6.6,
+        9,
+        6.4,
+        7.8
+      ],
+      "freshnessDate": "2026-03-19",
+      "externalUrl": "https://neuroproductions.be/",
+      "detailSignals": {
+        "scoreText": "7.32 /10",
+        "tooltipText": null,
+        "externalCandidates": [
+          {
+            "href": "https://neuroproductions.be/",
+            "text": "Visit Site",
+            "className": "button button--medium--rounded",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 88
+          },
+          {
+            "href": "https://neuroproductions.be/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://neuroproductions.be/",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://neuroproductions.be/",
+            "text": "Stuff by Kris Temmerman",
+            "className": "",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 20
+          }
+        ]
+      }
+    },
+    {
+      "detailUrl": "https://www.awwwards.com/sites/darknode",
+      "sitePath": "/sites/darknode",
+      "id": "darknode",
+      "title": "Darknode",
+      "sourceTitle": "Darknode",
+      "author": "Qream",
+      "awardTags": [
+        "SOTD",
+        "New",
+        "video"
+      ],
+      "awardType": "SOTD",
+      "score": 7.31,
+      "overallScores": [
+        7.31,
+        7.06,
+        7.69,
+        7.29,
+        6.6,
+        7.4,
+        6.6,
+        6.8
+      ],
+      "freshnessDate": "2026-03-20",
+      "externalUrl": "https://www.darknode.army/en",
+      "detailSignals": {
+        "scoreText": "7.31 /10",
+        "tooltipText": null,
+        "externalCandidates": [
+          {
+            "href": "https://www.darknode.army/en",
+            "text": "Visit Site",
+            "className": "button button--medium--rounded",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 88
+          },
+          {
+            "href": "https://www.darknode.army/en",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://www.darknode.army/en",
+            "text": "",
+            "className": "toolbar-bts__item",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 60
+          },
+          {
+            "href": "https://www.darknode.army/en",
+            "text": "Darknode",
+            "className": "",
+            "target": "_blank",
+            "source": "anchor",
+            "score": 20
+          }
+        ]
+      }
+    }
+  ]
+}

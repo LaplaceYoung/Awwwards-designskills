@@ -1,0 +1,42 @@
+node_modules/
+.npm-cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Runtime temp and local captures
+output/awwwards-design-selector/_archive-obsolete/
+output/awwwards-design-selector/reference-evidence/
+output/awwwards-design-selector/screenshots/
+output/awwwards-design-selector/screenshots-live/
+output/awwwards-design-selector/video-analysis/
+output/awwwards-design-selector/quality-loop/
+output/awwwards-design-selector/whu-promo-shed-hifi/
+output/awwwards-design-selector/replica-assets-gq-whu/
+output/awwwards-design-selector/replica-assets-gq-whu-cnfile/
+output/awwwards-design-selector/replica-assets-gq-whu-en/
+output/awwwards-design-selector/replica-assets-gq-whu-en2/
+output/awwwards-design-selector/replica-assets-whu/
+output/awwwards-design-selector/replica-assets-whu-specific/
+output/awwwards-design-selector/replica-assets-wuhan-tourism/
+agents/
+
+# Historical build cache artifacts
+output/awwwards-design-selector/candidates.raw*.json
+output/awwwards-design-selector/candidates.analyzed*.json
+output/awwwards-design-selector/candidates.shortlist*.json
+output/awwwards-design-selector/selection-brief*.md
+output/awwwards-design-selector/implementation-blueprint*.md
+output/awwwards-design-selector/replica-assets*.manifest.json
+output/awwwards-design-selector/project-profile.json
+output/awwwards-design-selector/quality-review.json
+output/awwwards-design-selector/reference-shed-*.json
+output/awwwards-design-selector/reference-shed-*.png
+output/awwwards-design-selector/intent-*.txt
+docs/pre-delivery-fullpage.png
+docs/pre-delivery-smoke.json
+**/pre-delivery-smoke.json
+**/replica-fidelity-review.json
+**/assets-map.json
+**/runtime-fullpage.png

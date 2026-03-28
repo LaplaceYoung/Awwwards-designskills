@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>武汉旅游宣传页 1.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="hero" id="top">
+      <img src="./assets/wuhan-skyline.jpg" alt="武汉夜景" class="hero-bg" />
+      <div class="hero-mask"></div>
+      <header class="topbar">
+        <a href="#top" class="brand">WUHAN 2026</a>
+        <nav>
+          <a href="#highlights">亮点</a>
+          <a href="#routes">路线</a>
+          <a href="#contact">咨询</a>
+        </nav>
+      </header>
+      <div class="hero-content reveal">
+        <p class="eyebrow">江城 · 樱花 · 夜色 · 烟火气</p>
+        <h1>一城两江三镇<br />把旅行变成故事</h1>
+        <a href="#routes" class="cta">查看一日路线</a>
+      </div>
+    </div>
+
+    <main>
+      <section class="highlights" id="highlights">
+        <h2 class="reveal">武汉旅行亮点</h2>
+        <div class="grid">
+          <article class="card reveal">
+            <img src="./assets/yellow-crane.jpg" alt="黄鹤楼" />
+            <h3>黄鹤楼与长江视野</h3>
+            <p>登楼看江，傍晚时段最适合拍摄城市天际线和桥梁灯光。</p>
+            <span>文化地标</span>
+          </article>
+          <article class="card reveal">
+            <img src="./assets/east-lake.jpg" alt="东湖绿道" />
+            <h3>东湖绿道慢行体验</h3>
+            <p>骑行与散步都很友好，春秋季节适合安排半日深度漫游。</p>
+            <span>自然景观</span>
+          </article>
+          <article class="card reveal">
+            <img src="./assets/wuhan-skyline.jpg" alt="武汉夜景" />
+            <h3>江滩夜景与城市烟火</h3>
+            <p>夜晚沿江步道、码头和街区灯光串联，城市氛围感很强。</p>
+            <span>夜游推荐</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="routes" id="routes">
+        <h2 class="reveal">武汉一日经典路线</h2>
+        <div class="timeline reveal">
+          <div><strong>08:30</strong><p>黄鹤楼开场，俯瞰长江与大桥</p></div>
+          <div><strong>11:30</strong><p>户部巷及周边午餐，体验本地小吃</p></div>
+          <div><strong>14:00</strong><p>东湖绿道骑行，串联湖畔景点</p></div>
+          <div><strong>18:30</strong><p>长江灯光夜景，结束当日城市漫游</p></div>
+        </div>
+      </section>
+
+      <section class="contact reveal" id="contact">
+        <h2>获取你的武汉旅行建议</h2>
+        <p>告诉我们出行时间与偏好，我们会返回个性化游玩清单。</p>
+        <form class="contact-form" action="#">
+          <label>姓名<input type="text" placeholder="请输入姓名" /></label>
+          <label>邮箱<input type="email" placeholder="you@example.com" /></label>
+          <label>偏好<textarea rows="4" placeholder="如：历史文化、夜景、美食、亲子"></textarea></label>
+          <button type="button">提交需求</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#top">返回顶部</a>
+      <p>武汉旅游宣传页 1.0 样例（Awwwards Design Selector）</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

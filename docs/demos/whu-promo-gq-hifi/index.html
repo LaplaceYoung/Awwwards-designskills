@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>武汉大学｜叙事宣传页（GQ榜一迁移版）</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__label">WUHAN UNIVERSITY</div><div class="preloader__value" id="loaderValue">00</div><div class="preloader__line"><span id="loaderBar"></span></div></div>
+    <div class="grain" aria-hidden="true"></div><div class="cursor" id="cursor"></div><div class="scroll-rail" aria-hidden="true"><span id="scrollRailThumb"></span></div><div class="chapter-meter" id="chapterMeter" aria-hidden="true"><span id="chapterIndex">00</span><em id="chapterLabel">Scroll Story</em><b class="chapter-meter__line"><i id="chapterProgressBar"></i></b></div>
+    <header class="topbar"><button class="menu-toggle" id="menuToggle" data-click-anim>目录</button><a class="brand" href="#top">武汉大学</a><a class="quick" href="#contact">申请咨询</a></header>
+    <nav class="overlay-menu" id="overlayMenu" aria-hidden="true"><button class="menu-toggle close" id="menuClose" data-click-anim>关闭</button><a href="#about" data-click-anim>关于</a><a href="#narrative" data-click-anim>叙事篇章</a><a href="#research" data-click-anim>科研前沿</a><a href="#index" data-click-anim>关键指数</a><a href="#stories" data-click-anim>校园现场</a><a href="#contact" data-click-anim>联系</a></nav>
+    <main id="top">
+      <section class="hero" id="about">
+        <div class="hero__media"><img src="./assets/whu-hero-3.jpg" class="hero-slide is-active" alt="校园现场" /><img src="./assets/whu-hero-1.jpg" class="hero-slide" alt="武汉大学" /><img src="./assets/whu-hero-2.jpg" class="hero-slide" alt="校园现场" /></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content"><p class="kicker reveal">1893—2026 · 学术传承与时代创新</p><h1 class="display split-lines" data-split>这座校园<span>把人文、科技与全球视野</span><span>放在同一条叙事线里。</span></h1><a href="#narrative" class="hero-link" data-click-anim>进入章节</a></div>
+      </section>
+      <section class="chapter-intro reveal"><small class="chapter-meta">Narrative Edition ? Wuhan University</small><p>参考榜一页面的“沉浸式专栏”节奏，我们将武汉大学迁移为连续阅读体验：一边滚动，一边看到学术场景、研究设施与真实校园生活如何接力展开。</p></section>
+      <section class="narrative" id="narrative">
+        <article class="story sticky-block" data-story-index="01" data-story-label="跨学科研究平台"><div class="story__media"><img src="./assets/lab-panel.jpg" alt="跨学科研究平台" data-parallax /></div><div class="story__copy reveal"><p class="story__index">Chapter 01</p><h2>跨学科研究平台</h2><p>医学、信息、材料与人文社科协同，形成从基础研究到场景落地的完整链路。</p></div></article>
+        <article class="story sticky-block" data-story-index="02" data-story-label="开放实验设施"><div class="story__media"><img src="./assets/research-lab.jpg" alt="开放实验设施" data-parallax /></div><div class="story__copy reveal"><p class="story__index">Chapter 02</p><h2>开放实验设施</h2><p>从高性能仪器到公共实验平台，支持本科生到博士后的持续探索。</p></div></article>
+        <article class="story sticky-block" data-story-index="03" data-story-label="全球协同场景"><div class="story__media"><img src="./assets/whu-hero-2.jpg" alt="全球协同场景" data-parallax /></div><div class="story__copy reveal"><p class="story__index">Chapter 03</p><h2>全球协同场景</h2><p>通过国际联合课程、实验室互访与城市协作计划，让校园研究与真实社会场景形成持续联动。</p></div></article>
+      </section>
+      <section class="research" id="research"><div class="section-head reveal"><h2>科研前沿</h2><p>借鉴 GQ 榜一页面的栏目化排版，保留高信息密度和沉浸视觉节奏。</p></div><div class="research-grid"><article class="research-card reveal" data-click-anim><h3>人工智能 + 医学</h3><p>构建多模态辅助诊疗模型，提升筛查效率与可解释性。</p><span>2026 重点推进</span></article><article class="research-card reveal" data-click-anim><h3>绿色低碳技术</h3><p>围绕新材料与能源系统，面向城市与工业场景开展联合攻关。</p><span>5 大联合课题</span></article><article class="research-card reveal" data-click-anim><h3>数字人文与治理</h3><p>以数据方法重构历史叙事、社会观察和公共政策研究。</p><span>跨院联合实验室</span></article></div></section>
+      <section class="index-strip" id="index"><div class="marquee"><div class="marquee__track"><span>武汉大学 · 130余年学术积淀</span><span>本科 · 硕士 · 博士一体化培养</span><span>国际合作与联合研究持续推进</span><span>武汉大学 · 130余年学术积淀</span><span>本科 · 硕士 · 博士一体化培养</span><span>国际合作与联合研究持续推进</span></div></div><div class="index-table reveal"><div><span>关键词</span><span>基础学科突破</span></div><div><span>关键词</span><span>高端科研平台</span></div><div><span>关键词</span><span>国际联合培养</span></div><div><span>关键词</span><span>校园创新生态</span></div></div></section>
+      <section class="stories" id="stories"><div class="section-head reveal"><h2>校园现场</h2><p>媒体素材按武汉大学主题替换，保持原参考站“图片驱动叙事”的组件逻辑。</p></div><div class="story-gallery"><figure class="story-tile reveal" data-click-anim><img src="./assets/whu-hero-1.jpg" alt="校园现场" /><figcaption>地标空间与学习场景</figcaption></figure><figure class="story-tile reveal" data-click-anim><img src="./assets/whu-hero-2.jpg" alt="校园现场" /><figcaption>春季校园与公共活动</figcaption></figure><figure class="story-tile reveal" data-click-anim><img src="./assets/whu-hero-3.jpg" alt="校园现场" /><figcaption>国际交流与城市连接</figcaption></figure></div></section>
+      <section class="contact reveal" id="contact"><h2>申请与咨询</h2><p>如需了解本科、研究生或国际项目，请留下你的研究兴趣方向。</p><form class="contact-form" action="#"><label>姓名<input type="text" placeholder="请输入姓名" /></label><label>邮箱<input type="email" placeholder="you@example.com" /></label><label>意向<textarea rows="4" placeholder="如：人工智能、医学转化、数字人文等"></textarea></label><button type="button" data-click-anim>提交咨询</button></form></section>
+    </main>
+    <footer class="footer"><a href="#top">返回顶部</a><p>武汉大学宣传页高保真迁移实验（本地演示）</p></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

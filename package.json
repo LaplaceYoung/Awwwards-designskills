@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "collect:assets": "node scripts/collect_replica_assets.js",
+    "capture:no-recording": "node scripts/capture_no_recording_evidence.js",
+    "review:quality": "node scripts/review_pipeline_quality.js",
+    "review:replica": "node scripts/review_replica_fidelity.js",
+    "smoke:delivery": "node scripts/pre_delivery_smoke_test.js",
+    "loop:quality": "node scripts/run_quality_loop.js"
+  },
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}

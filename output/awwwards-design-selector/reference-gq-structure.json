@@ -1,0 +1,22 @@
+{
+  "id": "gq-ap-the-extraordinary-lab",
+  "title": "GQ & AP The Extraordinary Lab",
+  "source": "https://www.gq.com/sponsored/story/the-extraordinary-lab",
+  "nav": ["About", "Narrative", "Research", "Index", "Stories", "Contact"],
+  "modules": [
+    "topbar",
+    "overlay-menu",
+    "hero",
+    "chapter-intro",
+    "narrative",
+    "research",
+    "index-strip",
+    "stories",
+    "contact"
+  ],
+  "notes": [
+    "Profile for gq-style replica scoring",
+    "Use with review_replica_fidelity.js --profile gq"
+  ]
+}
+

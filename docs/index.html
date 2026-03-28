@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awwwards Design Skills | Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="hero-nav">
+        <a href="#capabilities" data-click-anim>能力</a>
+        <a href="#prompts" data-click-anim>提示词</a>
+        <a href="#cases" data-click-anim>案例</a>
+        <a href="#tests" data-click-anim>测试</a>
+      </nav>
+      <p class="badge">Awwwards Design Skills</p>
+      <h1>高保真网页复刻与迁移</h1>
+      <p class="lead">
+        从榜单抓取、真实取证、交互拆解、滚动时间线复现到业务化内容迁移，形成可执行、可评分、可迭代的设计工程闭环。
+      </p>
+      <a class="cta" href="https://github.com/LaplaceYoung/Awwwards-designskills" target="_blank" rel="noreferrer" data-click-anim>查看 GitHub 仓库</a>
+    </header>
+
+    <main>
+      <section id="capabilities">
+        <h2>核心能力</h2>
+        <div class="feature-grid">
+          <article class="card"><h3>真实外链抓取</h3><p>优先使用真实目标站点而非导航页，确保复刻依据准确。</p></article>
+          <article class="card"><h3>无录屏取证</h3><p>自动采集 desktop/mobile 全页、滚动帧、点击三帧、交互分类与动效线索。</p></article>
+          <article class="card"><h3>90+ 评分闭环</h3><p>组件、内容、动效、点击、滚动、导航与媒体适配统一进入自动评审。</p></article>
+        </div>
+      </section>
+
+      <section id="prompts">
+        <h2>最佳实践提示词</h2>
+        <article class="prompt-block">
+          <h3>1.0 样本提示：武汉市旅游宣传页</h3>
+          <pre><code>请使用 awwwards-design-selector 技能生成“武汉市旅游宣传页面 1.0”。
+要求：
+1) 中文优先，包含 Hero、亮点卡片、一日路线、咨询表单；
+2) 至少 3 张武汉旅游相关图片（黄鹤楼/东湖/长江夜景）；
+3) 首次交付前必须跑 smoke test 并输出截图。
+（零样本默认：复刻本年度高分网站设计语言）
+输出目录：output/awwwards-design-selector/wuhan-tourism-v1/</code></pre>
+        </article>
+        <article class="prompt-block">
+          <h3>2. 迭代提示：武汉大学宣传页增强</h3>
+          <pre><code>请基于已有武汉大学宣传页继续精进，并保持参考站动效语言。
+任务：
+1) 强化章节滚动叙事与点击反馈；
+2) 替换业务相关媒体素材；
+3) 输出 before/after 对比截图；
+4) 提供 fidelity 与 smoke 验证结果。
+输出目录：output/awwwards-design-selector/whu-promo-gq-hifi/</code></pre>
+        </article>
+      </section>
+
+      <section id="cases">
+        <h2>案例结果</h2>
+        <div class="case-grid">
+          <figure>
+            <img src="./assets/wuhan-tourism-fullpage.png" alt="武汉旅游宣传页" />
+            <figcaption>武汉旅游宣传页（Smoke PASS）</figcaption>
+            <a class="demo-link" href="./demos/wuhan-tourism-v1/index.html" target="_blank" rel="noreferrer" data-click-anim>打开 Demo</a>
+          </figure>
+          <figure>
+            <img src="./assets/whu-before-after.jpg" alt="武汉大学页面前后对比图" />
+            <figcaption>武汉大学宣传页（高保真迁移版）</figcaption>
+            <a class="demo-link" href="./demos/whu-promo-gq-hifi/index.html" target="_blank" rel="noreferrer" data-click-anim>打开 Demo</a>
+          </figure>
+        </div>
+      </section>
+
+      <section id="tests">
+        <h2>测试截图</h2>
+        <div class="case-grid">
+          <figure>
+            <img src="./assets/test-docs-home.png" alt="展示首页测试截图" />
+            <figcaption>展示首页 smoke 截图</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/test-whu-home.png" alt="武汉大学页面测试截图" />
+            <figcaption>武汉大学页面 smoke 截图</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/test-wuhan-home.png" alt="武汉旅游页面测试截图" />
+            <figcaption>武汉旅游页面 smoke 截图</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Awwwards Design Skills · GitHub Pages Showcase</p>
+      <p><a class="demo-link" href="./design-reference-audit.md" target="_blank" rel="noreferrer" data-click-anim>设计参考映射文档</a></p>
+      <p><a class="demo-link" href="./test-report.md" target="_blank" rel="noreferrer" data-click-anim>测试报告</a></p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
