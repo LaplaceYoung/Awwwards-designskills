@@ -2,68 +2,64 @@
 
 生成时间：2026-03-28
 
-本文档用于复查“本地页面模块 -> 参考网站设计语言 -> 迁移实现”的映射关系。
+本文档用于复查“页面用途 -> 参考网站 -> 模块映射 -> 本地实现路径”。
 
-## 1. 当前主参考站
+## 1. 页面角色拆分
 
-| 参考站 | URL | 用途 |
+| 页面 | 角色 | 参考网站 |
 | --- | --- | --- |
-| Better Off THE LOOKBACK | `https://tlb.betteroff.studio/` | `docs/index.html` 的主复刻参考（结构、交互、动效、视觉节奏） |
+| `docs/index.html` | Skill 宣传首页 | 非单站复刻，汇总本 skill 能力与样例入口 |
+| `docs/demos/wuhan-tourism-tlb/index.html` | 武汉城市宣传样例（TLB 高保真） | `https://tlb.betteroff.studio/` |
+| `docs/demos/whu-promo-gq-hifi/index.html` | 武汉大学宣传样例（GQ 风格） | GQ 榜一参考站 |
+| `docs/demos/wuhan-tourism-v1/index.html` | 武汉旅游样例 1.0（历史版本） | GQ 风格迁移 |
 
-本轮已在 `output/awwwards-design-selector/reference-evidence/tlb-betteroff-live/` 保存真实访问证据：
+## 2. TLB 武汉样例模块映射
 
-- `desktop-fullpage.png`
-- `mobile-fullpage.png`
-- `timeline/*.png`
-- `interactions/*.png`
-- `evidence.json`
+页面文件：`docs/demos/wuhan-tourism-tlb/index.html`
 
-## 2. 首页模块映射（TLB -> 武汉版）
-
-页面文件：`docs/index.html`
-
-| 本地模块 | 参考站模块 | 复刻点 | 武汉化改造 |
+| 本地模块 | 参考站模块 | 复刻要点 | 本地迁移 |
 | --- | --- | --- | --- |
-| 顶部左侧菜单（Timeline/Surf/Index/About） | 顶部左侧路由菜单 | 文本导航、轻量 hover 强调、路由状态高亮 | 菜单保留原路由词，内容落地到武汉叙事章节 |
-| 右侧月份索引双列 | 右侧年度索引信息墙 | 高密度等宽信息列表、固定在右侧 | 保留格式与节奏，改为武汉宣传语境的数据标签 |
-| 门禁首屏（Enter with sound / ...or without） | 首屏进入门禁 | 居中超大标题 + 声音入口 + 无声入口 | 标题改为“武汉城市档案 THE LOOKBACK (WH®)/2026”，音频替换为本地武汉氛围音轨 |
-| 超大无衬线标题层级 | 原站巨型 display 标题 | 黑白高对比、紧凑字距、强层级 | 中文主文案优先，保留英文字母块节奏 |
-| 路由切换转场 | 原站页面切换过渡 | 切换时淡入/位移，主题色切换 | `timeline/index` 用浅底，`surf/about` 用暗底，增强章节区分 |
-| 滚动 reveal 与 hero 动效 | 原站滚动叙事动效 | GSAP + ScrollTrigger 做 section reveal 和 hero 轻 pin/scrub | 映射到武汉卡片、数据模块和说明块 |
-| 卡片 hover / click 反馈 | 原站 hover 与点击状态变化 | 卡片轻倾斜、按钮按压、点击冲击波（impact ring） | 作用于武汉图文卡与信息卡 |
-| 跑马灯关键词带 | 原站连续滚动信息带 | 横向连续滚动文本 | 文案替换为“武汉/光谷/东湖/长江主轴”等关键词 |
+| 顶部菜单（Timeline/Surf/Index/About） | 顶部路由菜单 | 轻量文本导航 + active 强调 + 切页反馈 | 保留路由结构，内容替换为武汉叙事章节 |
+| 右侧月份索引墙 | 年度索引信息墙 | 双列固定索引、等宽字、高密度信息 | 保留视觉密度，文案替换为样例数据 |
+| 门禁首屏（Enter with sound） | 首屏 gate | 大标题 + 声音入口 + 无声入口 | 标题与文案替换为武汉主题，接入本地音频 |
+| 路由转场 | 页面切换动效 | 淡入/位移/主题切换 | `timeline/index` 浅底，`surf/about` 深底 |
+| 滚动 reveal | 章节滚动动效 | GSAP + ScrollTrigger 节点揭示 | 应用于故事卡、媒体卡、索引卡 |
+| 按钮与卡片反馈 | hover/click 交互 | 按压、点击冲击波、轻倾斜 | 保持原交互语义，替换为中文内容块 |
+| 跑马灯关键词带 | 连续信息带 | 横向循环滚动 | 替换为武汉城市关键词 |
 
-## 3. 媒体与音频替换清单（武汉意图）
+## 3. 中文适配修正（本轮）
 
-目录：`docs/assets/tlb-wuhan/`
+针对中文字体与排版问题，已在 `docs/demos/wuhan-tourism-tlb/styles.css` 完成：
 
-- 图片：
-  - `wuhan-skyline.jpg`
-  - `yellow-crane.jpg`
-  - `east-lake.jpg`
-  - `whu-hero-1.jpg`
-  - `whu-hero-2.jpg`
-  - `whu-hero-3.jpg`
-  - `wuhan.jpg`
-  - `yellow_crane_tower.jpg`
-- 音频：
-  - `wuhan-ambient.wav`（本地循环背景音）
+- 增加中文显示字族变量：`--cn-display`
+- 门禁标题拆分为中英文行，分别控制字号与字距
+- 中文大标题使用 `route-title-cn`，关闭英文式 uppercase
+- 中文段落统一 `line-height` 与 `word-break: keep-all`
+- 主内容区宽度调整并给右侧索引留出避让空间，避免叠压
 
-## 4. 可复验命令
+## 4. 证据与资源
+
+参考站真实抓取证据：
+
+- `output/awwwards-design-selector/reference-evidence/tlb-betteroff-live/evidence.json`
+- `output/awwwards-design-selector/reference-evidence/tlb-betteroff-live/desktop-fullpage.png`
+- `output/awwwards-design-selector/reference-evidence/tlb-betteroff-live/mobile-fullpage.png`
+- `output/awwwards-design-selector/reference-evidence/tlb-betteroff-live/timeline/*.png`
+- `output/awwwards-design-selector/reference-evidence/tlb-betteroff-live/interactions/*.png`
+
+TLB 武汉样例资源：
+
+- `docs/demos/wuhan-tourism-tlb/assets/`
+
+## 5. 可复验命令
 
 ```bash
 # 1) 参考站证据抓取
 node scripts/capture_no_recording_evidence.js --url "https://tlb.betteroff.studio/" --site-id tlb-betteroff-live --frames 12
 
-# 2) 首页烟测
+# 2) 首页 smoke（skill 宣传页）
 node scripts/pre_delivery_smoke_test.js --page docs --out docs/pre-delivery-smoke.json
 
-# 3) Demo 烟测
-node scripts/pre_delivery_smoke_test.js --page docs/demos/whu-promo-gq-hifi --out docs/demos/whu-promo-gq-hifi/pre-delivery-smoke.json
-node scripts/pre_delivery_smoke_test.js --page docs/demos/wuhan-tourism-v1 --out docs/demos/wuhan-tourism-v1/pre-delivery-smoke.json
+# 3) TLB 武汉样例 smoke
+node scripts/pre_delivery_smoke_test.js --page docs/demos/wuhan-tourism-tlb --out docs/demos/wuhan-tourism-tlb/pre-delivery-smoke.json
 ```
-
-## 5. 说明
-
-- 本仓库复刻目标是“结构/动效/视觉语言相似”，不是拷贝第三方受版权保护品牌资产。
-- 业务迁移优先中文语境和武汉主题素材，保持参考站交互节奏与版式逻辑。

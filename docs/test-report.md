@@ -6,7 +6,8 @@
 
 | 页面 | 结果 | 报告文件 |
 | --- | --- | --- |
-| `docs/index.html`（TLB 武汉宣传主页） | PASS | `docs/pre-delivery-smoke.json` |
+| `docs/index.html`（Skill 宣传主页） | PASS | `docs/pre-delivery-smoke.json` |
+| `docs/demos/wuhan-tourism-tlb/index.html`（TLB 武汉样例） | PASS | `docs/demos/wuhan-tourism-tlb/pre-delivery-smoke.json` |
 | `docs/demos/whu-promo-gq-hifi/index.html` | PASS | `docs/demos/whu-promo-gq-hifi/pre-delivery-smoke.json` |
 | `docs/demos/wuhan-tourism-v1/index.html` | PASS | `docs/demos/wuhan-tourism-v1/pre-delivery-smoke.json` |
 
@@ -22,7 +23,7 @@
 ## 截图归档
 
 - 主页全页：`docs/assets/test-docs-home.png`
-- Surf 路由态：`docs/assets/test-surf-route.png`
-- About 路由态：`docs/assets/test-about-route.png`
+- TLB 样例 Surf 路由态：`docs/assets/test-surf-route.png`
+- TLB 样例 About 路由态：`docs/assets/test-about-route.png`
 - WHU Demo：`docs/assets/test-whu-home.png`
-- Wuhan Tourism Demo：`docs/assets/test-wuhan-home.png`
+- TLB Wuhan Demo 全页：`docs/assets/test-wuhan-home.png`

@@ -10,7 +10,9 @@ High-fidelity Awwwards-style reconstruction workflow with real-site evidence cap
 ## Live Demo
 
 - Pages: [https://laplaceyoung.github.io/Awwwards-designskills/](https://laplaceyoung.github.io/Awwwards-designskills/)
-- Current homepage theme: **TLB-style Wuhan promotion** (reference: `https://tlb.betteroff.studio/`)
+- Homepage role: **Skill promotion landing** (`docs/index.html`)
+- TLB Wuhan sample demo: `docs/demos/wuhan-tourism-tlb/index.html` (reference: `https://tlb.betteroff.studio/`)
+  - Online URL: [https://laplaceyoung.github.io/Awwwards-designskills/demos/wuhan-tourism-tlb/](https://laplaceyoung.github.io/Awwwards-designskills/demos/wuhan-tourism-tlb/)
 
 ## What This Repo Delivers
 
@@ -26,11 +28,11 @@ High-fidelity Awwwards-style reconstruction workflow with real-site evidence cap
 .github/workflows/                 # GitHub Pages deployment
 assets/                            # Skill templates
 docs/                              # Published site (GitHub Pages root)
-  index.html                       # TLB-style Wuhan promo page
+  index.html                       # Skill promotion homepage
   styles.css
   script.js
   assets/                          # Local images, audio, smoke screenshots
-  demos/                           # Previous demo outputs (WHU / Wuhan tourism)
+  demos/                           # Demo outputs (WHU / Wuhan tourism / TLB-Wuhan)
   design-reference-audit.md        # Section-level reference mapping
   test-report.md                   # Smoke test results
 output/awwwards-design-selector/   # Runtime capture/audit outputs
@@ -45,21 +47,22 @@ SKILL.md
 npm install
 node scripts/capture_no_recording_evidence.js --url "https://tlb.betteroff.studio/" --site-id tlb-betteroff-live --frames 12
 node scripts/pre_delivery_smoke_test.js --page docs --out docs/pre-delivery-smoke.json
+node scripts/pre_delivery_smoke_test.js --page docs/demos/wuhan-tourism-tlb --out docs/demos/wuhan-tourism-tlb/pre-delivery-smoke.json
 node scripts/pre_delivery_smoke_test.js --page docs/demos/whu-promo-gq-hifi --out docs/demos/whu-promo-gq-hifi/pre-delivery-smoke.json
 node scripts/pre_delivery_smoke_test.js --page docs/demos/wuhan-tourism-v1 --out docs/demos/wuhan-tourism-v1/pre-delivery-smoke.json
 ```
 
 ## Test Screenshots
 
-### Homepage Smoke (TLB Wuhan Edition)
+### Homepage Smoke (Skill Landing)
 
 ![Docs Smoke](docs/assets/test-docs-home.png)
 
-### Route Snapshot: Surf
+### TLB Wuhan Demo: Surf Route
 
 ![Surf Route](docs/assets/test-surf-route.png)
 
-### Route Snapshot: About
+### TLB Wuhan Demo: About Route
 
 ![About Route](docs/assets/test-about-route.png)
 

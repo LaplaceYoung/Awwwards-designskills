@@ -1,155 +1,19 @@
-﻿const body = document.body;
-const gate = document.getElementById("entryGate");
-const routeStage = document.getElementById("routeStage");
-const menuLinks = Array.from(document.querySelectorAll(".site-menu-link"));
-const panels = Array.from(document.querySelectorAll(".route-panel"));
-const enterWithSound = document.getElementById("enterWithSound");
-const enterSilent = document.getElementById("enterSilent");
-const audio = document.getElementById("ambientAudio");
-const audioToggle = document.getElementById("audioToggle");
-const loadState = document.getElementById("loadState");
+﻿const pageShell = document.querySelector(".page-shell");
+const focusImage = document.getElementById("focusImage");
+const focusTitle = document.getElementById("focusTitle");
+const focusKicker = document.getElementById("focusKicker");
+const langButtons = Array.from(document.querySelectorAll(".lang-btn"));
+const floatCards = Array.from(document.querySelectorAll(".float-card"));
+const navButtons = Array.from(document.querySelectorAll("[data-panel-target]"));
+const closeButtons = Array.from(document.querySelectorAll("[data-close-panel]"));
 
-let entered = false;
-let audioEnabled = false;
-let currentRoute = "timeline";
+const panelMap = {
+  about: document.getElementById("aboutPanel"),
+  projects: document.getElementById("projectsPanel"),
+  contact: document.getElementById("contactPanel"),
+};
 
-if (window.gsap && window.ScrollTrigger) {
-  window.gsap.registerPlugin(window.ScrollTrigger);
-}
-
-const darkRoutes = new Set(["surf", "about"]);
-
-function setThemeByRoute(route) {
-  body.classList.toggle("theme-dark", darkRoutes.has(route));
-  body.classList.toggle("theme-light", !darkRoutes.has(route));
-}
-
-function updateAudioUI() {
-  if (!audioToggle) return;
-  audioToggle.textContent = audioEnabled ? "Sound: On" : "Sound: Off";
-}
-
-async function toggleAudio(forceOn) {
-  if (!audio) return;
-  if (typeof forceOn === "boolean") {
-    audioEnabled = forceOn;
-  } else {
-    audioEnabled = !audioEnabled;
-  }
-
-  if (audioEnabled) {
-    try {
-      await audio.play();
-    } catch {
-      audioEnabled = false;
-    }
-  } else {
-    audio.pause();
-  }
-
-  updateAudioUI();
-}
-
-function clearScrollTriggers() {
-  if (!window.ScrollTrigger) return;
-  window.ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-}
-
-function initPanelMotion(panel) {
-  if (!panel || !window.gsap) return;
-  clearScrollTriggers();
-
-  const hero = panel.querySelector(".route-hero");
-  const title = panel.querySelector(".route-title");
-  const reveals = Array.from(panel.querySelectorAll(".js-reveal"));
-
-  if (hero && title) {
-    window.gsap.fromTo(
-      title,
-      { yPercent: 18, opacity: 0.04, scale: 1.04 },
-      { yPercent: 0, opacity: 1, scale: 1, duration: 0.9, ease: "power2.out" }
-    );
-
-    if (window.ScrollTrigger) {
-      window.ScrollTrigger.create({
-        trigger: hero,
-        start: "top top",
-        end: "+=240",
-        scrub: 0.8,
-        onUpdate(self) {
-          window.gsap.to(hero, {
-            y: -24 * self.progress,
-            scale: 1 - 0.05 * self.progress,
-            overwrite: "auto",
-            duration: 0.12,
-          });
-        },
-      });
-    }
-  }
-
-  reveals.forEach((el, index) => {
-    window.gsap.fromTo(
-      el,
-      { y: 42, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.66,
-        ease: "power3.out",
-        delay: index * 0.05,
-        scrollTrigger: window.ScrollTrigger
-          ? {
-              trigger: el,
-              start: "top 86%",
-              toggleActions: "play none none reverse",
-            }
-          : undefined,
-      }
-    );
-  });
-
-  if (window.ScrollTrigger) {
-    window.ScrollTrigger.refresh();
-  }
-}
-
-function setRoute(route, pushHash = true) {
-  const panel = panels.find((item) => item.dataset.panel === route);
-  if (!panel) return;
-
-  currentRoute = route;
-  body.dataset.route = route;
-  setThemeByRoute(route);
-
-  menuLinks.forEach((link) => link.classList.toggle("is-active", link.dataset.routeTarget === route));
-  panels.forEach((item) => item.classList.toggle("is-active", item === panel));
-
-  if (pushHash) {
-    history.replaceState(null, "", `#${route}`);
-  }
-
-  window.scrollTo({ top: 0, behavior: "auto" });
-
-  window.gsap?.fromTo(
-    panel,
-    { opacity: 0.08, y: 18 },
-    { opacity: 1, y: 0, duration: 0.48, ease: "power2.out" }
-  );
-
-  initPanelMotion(panel);
-}
-
-function bindRouteNav() {
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      if (!entered) return;
-      const route = link.dataset.routeTarget;
-      if (route) setRoute(route, true);
-    });
-  });
-}
+let currentLang = "zh";
 
 function applyClickFeedback() {
   document.querySelectorAll("[data-click-anim]").forEach((el) => {
@@ -166,116 +30,89 @@ function applyClickFeedback() {
       const rect = el.getBoundingClientRect();
       const ring = document.createElement("span");
       ring.className = "impact-ring";
-      const x = event.clientX ? event.clientX - rect.left : rect.width / 2;
-      const y = event.clientY ? event.clientY - rect.top : rect.height / 2;
-      ring.style.setProperty("--ring-x", `${x}px`);
-      ring.style.setProperty("--ring-y", `${y}px`);
+      ring.style.setProperty("--ring-x", `${event.clientX - rect.left || rect.width / 2}px`);
+      ring.style.setProperty("--ring-y", `${event.clientY - rect.top || rect.height / 2}px`);
       el.appendChild(ring);
       window.setTimeout(() => ring.remove(), 620);
-      window.setTimeout(() => el.classList.remove("is-clicked"), 400);
+      window.setTimeout(() => el.classList.remove("is-clicked"), 420);
     });
   });
 }
 
-function bindTiltEffects() {
-  const tiltTargets = Array.from(document.querySelectorAll(".story-card, .media-card, .index-item, .about-card"));
+function setLang(lang) {
+  currentLang = lang;
+  langButtons.forEach((btn) => btn.classList.toggle("is-on", btn.dataset.lang === lang));
+  document.querySelectorAll("[data-i18n-zh]").forEach((el) => {
+    const text = lang === "zh" ? el.dataset.i18nZh : el.dataset.i18nEn;
+    if (text) el.textContent = text;
+  });
+  if (focusTitle) {
+    focusTitle.textContent = lang === "zh" ? focusTitle.dataset.zh : focusTitle.dataset.en;
+  }
+}
 
-  tiltTargets.forEach((target) => {
-    target.addEventListener("mousemove", (event) => {
-      if (!entered) return;
-      const rect = target.getBoundingClientRect();
-      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
-      const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
-      target.style.transform = `perspective(900px) rotateX(${(-y * 2.6).toFixed(2)}deg) rotateY(${(x * 3.4).toFixed(2)}deg) translateY(-2px)`;
+function setFocusFromCard(card) {
+  if (!card || !focusImage || !focusTitle || !focusKicker) return;
+  floatCards.forEach((item) => item.classList.remove("is-active"));
+  card.classList.add("is-active");
+  const image = card.dataset.image;
+  const title = currentLang === "zh" ? card.dataset.titleZh : card.dataset.titleEn;
+  const kicker = card.dataset.tag || "[PROJECT]";
+  if (image) focusImage.src = image;
+  if (title) focusTitle.textContent = title;
+  focusKicker.textContent = kicker;
+}
+
+function bindFloatCards() {
+  floatCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => setFocusFromCard(card));
+    card.addEventListener("focus", () => setFocusFromCard(card), true);
+    card.addEventListener("click", () => setFocusFromCard(card));
+  });
+}
+
+function bindPanels() {
+  navButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.panelTarget;
+      const panel = panelMap[target];
+      if (panel) panel.showModal();
     });
-
-    target.addEventListener("mouseleave", () => {
-      target.style.transform = "";
+  });
+  closeButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const panel = btn.closest("dialog");
+      if (panel) panel.close();
     });
   });
 }
 
-function exitGate() {
-  if (!gate || entered) return;
-  entered = true;
-  body.classList.remove("gate-active");
-
-  const targetRoute = (location.hash || "#timeline").replace("#", "") || "timeline";
-
-  if (window.gsap) {
-    const tl = window.gsap.timeline();
-    tl.to(".gate-title", { y: -16, opacity: 0, duration: 0.38, ease: "power2.in" })
-      .to(".gate-cta-wrap", { y: 16, opacity: 0, duration: 0.26, ease: "power2.in" }, "<")
-      .to(gate, {
-        opacity: 0,
-        duration: 0.28,
-        onComplete() {
-          gate.classList.add("is-hidden");
-          gate.style.display = "none";
-          setRoute(targetRoute, false);
-        },
-      });
-  } else {
-    gate.style.display = "none";
-    setRoute(targetRoute, false);
-  }
-}
-
-function boot() {
-  bindRouteNav();
-  bindTiltEffects();
-  applyClickFeedback();
-
-  const hashRoute = (location.hash || "#timeline").replace("#", "");
-  setRoute(hashRoute, false);
-
-  if (enterWithSound) {
-    enterWithSound.addEventListener("click", async () => {
-      await toggleAudio(true);
-      exitGate();
+function bindParallax() {
+  if (!pageShell) return;
+  pageShell.addEventListener("mousemove", (event) => {
+    const xRatio = (event.clientX / window.innerWidth - 0.5) * 2;
+    const yRatio = (event.clientY / window.innerHeight - 0.5) * 2;
+    floatCards.forEach((card, index) => {
+      const factor = 4 + (index % 3) * 2;
+      card.style.transform = `translate(${xRatio * factor}px, ${yRatio * factor}px)`;
     });
-  }
-
-  if (enterSilent) {
-    enterSilent.addEventListener("click", async () => {
-      await toggleAudio(false);
-      exitGate();
-    });
-  }
-
-  if (audioToggle) {
-    audioToggle.addEventListener("click", async () => {
-      if (!entered) return;
-      await toggleAudio();
-    });
-  }
-
-  // Allow automated smoke tests to pass interaction gates without manual clicks.
-  if (navigator.webdriver) {
-    window.setTimeout(async () => {
-      if (!entered) {
-        await toggleAudio(false);
-        exitGate();
-      }
-    }, 260);
-  }
-
-  window.addEventListener("hashchange", () => {
-    if (!entered) return;
-    const route = (location.hash || "#timeline").replace("#", "");
-    if (route && route !== currentRoute) setRoute(route, false);
   });
-
-  if (loadState) {
-    const states = ["LOADED", "LIVE", "SYNCED"];
-    let i = 0;
-    window.setInterval(() => {
-      i = (i + 1) % states.length;
-      loadState.textContent = states[i];
-    }, 3400);
-  }
-
-  updateAudioUI();
+  pageShell.addEventListener("mouseleave", () => {
+    floatCards.forEach((card) => {
+      card.style.transform = "";
+    });
+  });
 }
 
-boot();
+langButtons.forEach((btn) => {
+  btn.addEventListener("click", () => setLang(btn.dataset.lang || "zh"));
+});
+
+applyClickFeedback();
+bindFloatCards();
+bindPanels();
+bindParallax();
+setLang("zh");
+setFocusFromCard(floatCards[0]);
+
+
