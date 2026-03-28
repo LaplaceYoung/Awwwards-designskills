@@ -89,12 +89,6 @@ node scripts/pre_delivery_smoke_test.js --page output/awwwards-design-selector/w
 node scripts/review_replica_fidelity.js --page output/awwwards-design-selector/whu-promo-gq-hifi --profile gq --reference output/awwwards-design-selector/reference-gq-structure.json --assets output/awwwards-design-selector/whu-promo-gq-hifi/assets-map.json --intent "wuhan university campaign" --threshold 90
 ```
 
-## 部署到 GitHub Pages
 
-1. 推送仓库到 `main` 分支。
-2. 在仓库设置中启用 **Pages**（GitHub Actions）。
-3. 工作流 `.github/workflows/deploy-pages.yml` 会自动发布 `docs/`。
 
-目标仓库：
-[https://github.com/LaplaceYoung/Awwwards-designskills](https://github.com/LaplaceYoung/Awwwards-designskills)
 
