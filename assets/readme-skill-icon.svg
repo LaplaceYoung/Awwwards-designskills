@@ -1,0 +1,24 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="40" x2="440" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1117"/>
+      <stop offset="1" stop-color="#1F2937"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="92" y1="120" x2="388" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="24" y="24" width="432" height="432" rx="84" fill="url(#bg)"/>
+  <rect x="90" y="106" width="300" height="22" rx="11" fill="#F8FAFC" fill-opacity="0.9"/>
+  <rect x="90" y="352" width="300" height="22" rx="11" fill="#F8FAFC" fill-opacity="0.9"/>
+
+  <rect x="98" y="162" width="94" height="162" rx="22" fill="url(#accent)" fill-opacity="0.18" stroke="url(#accent)" stroke-width="10"/>
+  <rect x="194" y="162" width="92" height="162" rx="22" fill="url(#accent)" fill-opacity="0.12" stroke="url(#accent)" stroke-width="10"/>
+  <rect x="288" y="162" width="94" height="162" rx="22" fill="url(#accent)" fill-opacity="0.08" stroke="url(#accent)" stroke-width="10"/>
+
+  <path d="M128 262L145 220H159L176 262H164L160 250H143L139 262H128ZM146 239H157L151 223L146 239Z" fill="#F8FAFC"/>
+  <path d="M215 220H240C252 220 258 226 258 236C258 243 255 248 248 251L259 262H244L235 252H229V262H215V220ZM229 232V241H239C242 241 244 239 244 236C244 233 242 232 239 232H229Z" fill="#F8FAFC"/>
+  <path d="M306 220H321C339 220 350 228 350 241C350 254 339 262 321 262H306V220ZM320 232V250H322C330 250 336 247 336 241C336 235 330 232 322 232H320Z" fill="#F8FAFC"/>
+</svg>
