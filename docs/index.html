@@ -1,180 +1,235 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awwwards Design Skills Studio</title>
+    <title>武汉城市 LOOKBACK 2026</title>
+    <meta
+      name="description"
+      content="基于高分 Awwwards 风格复刻的武汉城市宣传页，包含门禁首屏、音频入口、路由转场、滚动动效与交互卡片。"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Archivo:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <div class="page-shell">
-      <header class="top-nav">
-        <a class="mark" href="#" aria-label="Awwwards Design Skills">◉</a>
-        <a class="nav-btn" href="#aboutBlock" data-panel-target="about" data-click-anim>[ABOUT]</a>
-        <a class="nav-btn" href="#projectsBlock" data-panel-target="projects" data-click-anim>[PROJECTS]</a>
-        <a class="nav-btn" href="#contactBlock" data-panel-target="contact" data-click-anim>[CONTACT]</a>
-        <div class="lang-switch" aria-label="language switch">
-          <button class="lang-btn is-on" data-lang="zh" data-click-anim>[ZH]</button>
-          <button class="lang-btn" data-lang="en" data-click-anim>[EN]</button>
-        </div>
-      </header>
+  <body class="theme-light gate-active" data-route="timeline">
+    <div class="noise-layer" aria-hidden="true"></div>
 
-      <main class="hero-stage">
-        <h1 class="brand-title">Awwwards Design Skills Studio</h1>
+    <header class="site-header">
+      <p class="status-tag" id="loadState">LOADED</p>
+      <nav class="site-menu" aria-label="主导航">
+        <a class="site-menu-link is-active" href="#timeline" data-route-target="timeline">Timeline,</a>
+        <a class="site-menu-link" href="#surf" data-route-target="surf">Surf,</a>
+        <a class="site-menu-link" href="#index" data-route-target="index">Index,</a>
+        <a class="site-menu-link" href="#about" data-route-target="about">About</a>
+      </nav>
+      <button class="audio-chip" id="audioToggle" type="button" aria-label="切换背景音乐">
+        Sound: Off
+      </button>
+    </header>
 
-        <article
-          class="float-card left-top"
-          data-title-zh="武汉大学 · 叙事宣传页"
-          data-title-en="WHU Narrative Campaign"
-          data-tag="[WHU][CN]"
-          data-image="./demos/whu-promo-gq-hifi/assets/whu-hero-1.jpg"
-          data-click-anim
-        >
-          <img src="./demos/whu-promo-gq-hifi/assets/whu-hero-1.jpg" alt="武汉大学宣传页素材" />
-          <span class="float-label">[WHU][CN]</span>
-        </article>
+    <aside class="month-rail" aria-label="年度索引">
+      <div class="month-column">
+        <p>JANUARY</p>
+        <p>ARTICLES (3)</p>
+        <p>PODCAST EPISODES (2)</p>
+        <p>INSPIRATION (4)</p>
+        <p>MUSIC PLAYLIST (12)</p>
+        <p>CASES (1)</p>
+        <p>FEBRUARY</p>
+        <p>ARTICLES (3)</p>
+        <p>PODCAST EPISODES (2)</p>
+        <p>INSPIRATION (4)</p>
+        <p>MARCH</p>
+        <p>ARTICLES (3)</p>
+        <p>PODCAST EPISODES (2)</p>
+        <p>INSPIRATION (4)</p>
+        <p>MUSIC PLAYLIST (12)</p>
+        <p>CASES (1)</p>
+      </div>
+      <div class="month-column">
+        <p>AUGUST</p>
+        <p>ARTICLES (3)</p>
+        <p>PODCAST EPISODES (2)</p>
+        <p>INSPIRATION (4)</p>
+        <p>MUSIC PLAYLIST (12)</p>
+        <p>SEPTEMBER</p>
+        <p>ARTICLES (3)</p>
+        <p>PODCAST EPISODES (2)</p>
+        <p>OCTOBER</p>
+        <p>ARTICLES (3)</p>
+        <p>PODCAST EPISODES (2)</p>
+        <p>INSPIRATION (4)</p>
+        <p>MUSIC PLAYLIST (12)</p>
+        <p>NOVEMBER</p>
+        <p>ARTICLES (3)</p>
+        <p>PODCAST EPISODES (2)</p>
+      </div>
+    </aside>
 
-        <article
-          class="float-card left-mid"
-          data-title-zh="交互证据 · 点击三帧采集"
-          data-title-en="Interaction Evidence Capture"
-          data-tag="[MOTION][DATA]"
-          data-image="./assets/test-whu-home.png"
-          data-click-anim
-        >
-          <img src="./assets/test-whu-home.png" alt="交互测试截图" />
-          <span class="float-label">[MOTION][DATA]</span>
-        </article>
-
-        <article
-          class="float-card right-top"
-          data-title-zh="武汉旅游 · 城市宣传页"
-          data-title-en="Wuhan Tourism Campaign"
-          data-tag="[CITY][TOURISM]"
-          data-image="./demos/wuhan-tourism-v1/assets/wuhan-skyline.jpg"
-          data-click-anim
-        >
-          <img src="./demos/wuhan-tourism-v1/assets/wuhan-skyline.jpg" alt="武汉旅游宣传页素材" />
-          <span class="float-label">[CITY][TOURISM]</span>
-        </article>
-
-        <article
-          class="float-card right-mid"
-          data-title-zh="自动评分 · 90+ 闸门"
-          data-title-en="Automated Fidelity Gate"
-          data-tag="[QA][90+]"
-          data-image="./assets/test-docs-home.png"
-          data-click-anim
-        >
-          <img src="./assets/test-docs-home.png" alt="首页测试截图" />
-          <span class="float-label">[QA][90+]</span>
-        </article>
-
-        <article
-          class="float-card left-bottom"
-          data-title-zh="设计映射 · 二次复查"
-          data-title-en="Design Reference Audit"
-          data-tag="[AUDIT][MAP]"
-          data-image="./assets/whu-before-after.jpg"
-          data-click-anim
-        >
-          <img src="./assets/whu-before-after.jpg" alt="前后对比图" />
-          <span class="float-label">[AUDIT][MAP]</span>
-        </article>
-
-        <article
-          class="float-card right-bottom"
-          data-title-zh="无录屏模式 · 实站抓取"
-          data-title-en="No-Recording Reconstruction"
-          data-tag="[LIVE][MCP]"
-          data-image="./assets/test-wuhan-home.png"
-          data-click-anim
-        >
-          <img src="./assets/test-wuhan-home.png" alt="武汉旅游测试截图" />
-          <span class="float-label">[LIVE][MCP]</span>
-        </article>
-
-        <section class="focus-board">
-          <img id="focusImage" src="./demos/whu-promo-gq-hifi/assets/whu-hero-2.jpg" alt="核心展示图" />
-          <div class="focus-meta">
-            <p class="focus-kicker" id="focusKicker">[PROMO][ACTIVE]</p>
-            <h2 id="focusTitle" data-zh="武汉大学 · 叙事宣传页" data-en="WHU Narrative Campaign">武汉大学 · 叙事宣传页</h2>
-          </div>
-        </section>
-      </main>
-
-      <section class="info-block" id="aboutBlock">
-        <h3>[ABOUT]</h3>
-        <p>
-          Awwwards Design Skills focuses on high-fidelity website reconstruction and business adaptation.
-          The workflow is explicit: reference capture, interaction decomposition, implementation, browser verification, and iteration.
-        </p>
-      </section>
-
-      <section class="info-block" id="projectsBlock">
-        <h3>[PROJECTS]</h3>
-        <p>
-          Featured outputs: Wuhan University narrative campaign page, Wuhan tourism promotional page,
-          and a reusable no-recording reconstruction pipeline with click and scroll timeline audits.
-        </p>
-      </section>
-
-      <section class="info-block" id="contactBlock">
-        <h3>[CONTACT]</h3>
-        <p>
-          Repository:
-          <a href="https://github.com/LaplaceYoung/Awwwards-designskills" target="_blank" rel="noreferrer">
-            LaplaceYoung/Awwwards-designskills
-          </a>
-        </p>
-      </section>
-
-      <footer class="bottom-nav">
-        <a href="./README.md" data-click-anim>[README]</a>
-        <a href="./test-report.md" data-click-anim>[TESTS]</a>
-        <a href="./design-reference-audit.md" data-click-anim>[AUDIT]</a>
-        <a href="./demos/whu-promo-gq-hifi/index.html" data-click-anim>[WHU DEMO]</a>
-        <a href="./demos/wuhan-tourism-v1/index.html" data-click-anim>[TOURISM DEMO]</a>
-        <a href="https://github.com/LaplaceYoung/Awwwards-designskills" target="_blank" rel="noreferrer" data-click-anim>[GITHUB]</a>
-      </footer>
+    <div class="entry-gate" id="entryGate" aria-live="polite">
+      <h1 class="gate-title">
+        武汉城市档案<br />
+        THE LOOKBACK<br />
+        (WH®)/2026
+      </h1>
+      <div class="gate-cta-wrap">
+        <button id="enterWithSound" class="gate-cta" type="button" data-click-anim>
+          Enter with sound <span aria-hidden="true">→</span>
+        </button>
+        <button id="enterSilent" class="gate-link" type="button" data-click-anim>...or without</button>
+      </div>
     </div>
 
-    <dialog class="panel" id="aboutPanel">
-      <button class="panel-close" data-close-panel data-click-anim>[CLOSE]</button>
-      <h3>About</h3>
-      <p data-i18n-zh="Awwwards Design Skills 聚焦高保真复刻与业务迁移。我们把网页设计拆成可执行工程步骤：抓取、取证、复刻、评分、迭代。"
-         data-i18n-en="Awwwards Design Skills focuses on high-fidelity replication and business adaptation. The workflow is operational: capture, evidence, reconstruction, scoring, and iteration.">
-        Awwwards Design Skills 聚焦高保真复刻与业务迁移。我们把网页设计拆成可执行工程步骤：抓取、取证、复刻、评分、迭代。
-      </p>
-    </dialog>
+    <main class="route-stage" id="routeStage">
+      <section class="route-panel is-active" id="timeline" data-panel="timeline">
+        <div class="route-hero">
+          <p class="route-kicker">(WH®)</p>
+          <h2 class="route-title">TLB/2026</h2>
+          <p class="route-subtitle">城市发展时间轴 / 城市更新 / 文化现场</p>
+        </div>
 
-    <dialog class="panel" id="projectsPanel">
-      <button class="panel-close" data-close-panel data-click-anim>[CLOSE]</button>
-      <h3>Projects</h3>
-      <ul>
-        <li>Wuhan University Narrative Campaign</li>
-        <li>Wuhan Tourism Promo 1.0</li>
-        <li>No-Recording Evidence Reconstruction</li>
-      </ul>
-    </dialog>
+        <div class="content-stack">
+          <article class="story-card js-reveal" data-click-anim>
+            <img src="./assets/tlb-wuhan/wuhan-skyline.jpg" alt="武汉城市天际线" />
+            <div>
+              <p class="story-meta">JAN 2026 · 城市更新</p>
+              <h3>江岸线夜景焕新与滨水公共空间提升</h3>
+              <p>从长江主轴到汉口江滩，城市夜间公共活动半径持续扩大。</p>
+            </div>
+          </article>
 
-    <dialog class="panel" id="contactPanel">
-      <button class="panel-close" data-close-panel data-click-anim>[CLOSE]</button>
-      <h3>Contact</h3>
-      <p>
-        GitHub:
-        <a href="https://github.com/LaplaceYoung/Awwwards-designskills" target="_blank" rel="noreferrer">
-          LaplaceYoung/Awwwards-designskills
-        </a>
-      </p>
-    </dialog>
+          <article class="story-card js-reveal" data-click-anim>
+            <img src="./assets/tlb-wuhan/yellow-crane.jpg" alt="黄鹤楼" />
+            <div>
+              <p class="story-meta">MAR 2026 · 文化地标</p>
+              <h3>黄鹤楼与古城视廊保护计划</h3>
+              <p>以历史地标为核心，连通首义片区与城市叙事步行轴。</p>
+            </div>
+          </article>
 
+          <article class="story-card js-reveal" data-click-anim>
+            <img src="./assets/tlb-wuhan/east-lake.jpg" alt="东湖" />
+            <div>
+              <p class="story-meta">MAY 2026 · 生态湖区</p>
+              <h3>东湖慢行系统与湿地生态修复</h3>
+              <p>把湖岸步道、骑行绿道和科技园区生活圈连接成一体。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="route-panel" id="surf" data-panel="surf">
+        <div class="route-hero dark-hero">
+          <p class="route-kicker">SURF / 武汉流动界面</p>
+          <h2 class="route-title">城市脉冲</h2>
+          <p class="route-subtitle">事件、音乐、夜色与青年创作的交汇面</p>
+        </div>
+
+        <section class="marquee-band" aria-label="武汉关键词">
+          <div class="marquee-track">
+            <span>武汉 · 大江大湖 · 科研重镇 · 青年城市 · 武汉大学 · 光谷 · 长江主轴 · 东湖绿道 ·</span>
+            <span>武汉 · 大江大湖 · 科研重镇 · 青年城市 · 武汉大学 · 光谷 · 长江主轴 · 东湖绿道 ·</span>
+          </div>
+        </section>
+
+        <div class="media-grid">
+          <figure class="media-card tall js-reveal" data-click-anim>
+            <img src="./assets/tlb-wuhan/whu-hero-1.jpg" alt="武汉大学校园建筑" />
+            <figcaption>武汉大学 · 校园叙事空间</figcaption>
+          </figure>
+          <figure class="media-card js-reveal" data-click-anim>
+            <img src="./assets/tlb-wuhan/whu-hero-2.jpg" alt="武汉大学春景" />
+            <figcaption>樱花季公共文化界面</figcaption>
+          </figure>
+          <figure class="media-card js-reveal" data-click-anim>
+            <img src="./assets/tlb-wuhan/whu-hero-3.jpg" alt="武汉大学教学区" />
+            <figcaption>学术与城市共生网络</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="route-panel" id="index" data-panel="index">
+        <div class="route-hero">
+          <p class="route-kicker">INDEX / 城市索引</p>
+          <h2 class="route-title">WUHAN DATA WALL</h2>
+          <p class="route-subtitle">以信息密度呈现城市活力与传播内容</p>
+        </div>
+
+        <div class="sticker-layer" aria-hidden="true">
+          <span class="sticker cyan"></span>
+          <span class="sticker sky"></span>
+          <span class="sticker amber"></span>
+          <span class="sticker blue"></span>
+          <span class="sticker red"></span>
+        </div>
+
+        <div class="index-grid">
+          <article class="index-item js-reveal" data-click-anim>
+            <h3>城市报道</h3>
+            <p class="index-num">36</p>
+            <p>全年城市更新与文旅深度报道</p>
+          </article>
+          <article class="index-item js-reveal" data-click-anim>
+            <h3>播客专题</h3>
+            <p class="index-num">24</p>
+            <p>江城声音、在地人物与高校创新</p>
+          </article>
+          <article class="index-item js-reveal" data-click-anim>
+            <h3>城市案例</h3>
+            <p class="index-num">18</p>
+            <p>滨江更新、湖区治理、街区复兴样本</p>
+          </article>
+          <article class="index-item js-reveal" data-click-anim>
+            <h3>音乐清单</h3>
+            <p class="index-num">12</p>
+            <p>武汉夜跑与通勤氛围曲目</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="route-panel route-about" id="about" data-panel="about">
+        <div class="route-hero dark-hero">
+          <p class="route-kicker">ABOUT / 武汉城市宣传项目</p>
+          <h2 class="route-title">"THE LOOKBACK" WUHAN EDITION</h2>
+          <p class="route-subtitle">
+            复刻对象：tlb.betteroff.studio 的门禁交互、路由组织、黑白高对比视觉与索引系统。
+          </p>
+        </div>
+
+        <div class="about-layout">
+          <article class="about-card js-reveal" data-click-anim>
+            <h3>设计迁移策略</h3>
+            <p>保留原站的结构和动效语言，用武汉城市与高校素材替换媒体内容。</p>
+          </article>
+          <article class="about-card js-reveal" data-click-anim>
+            <h3>交互还原重点</h3>
+            <p>包含 Enter with sound、路由切换淡入淡出、滚动 reveal、卡片 hover 倾斜与点击反馈。</p>
+          </article>
+          <article class="about-card js-reveal" data-click-anim>
+            <h3>部署与验证</h3>
+            <p>通过 pre-delivery smoke test 生成截图并用于 README 样例更新。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="https://github.com/LaplaceYoung/Awwwards-designskills" target="_blank" rel="noreferrer" data-click-anim>
+        GitHub
+      </a>
+      <a href="./test-report.md" data-click-anim>Test Report</a>
+      <a href="./design-reference-audit.md" data-click-anim>Reference Audit</a>
+    </footer>
+
+    <audio id="ambientAudio" preload="auto" loop src="./assets/tlb-wuhan/wuhan-ambient.wav"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

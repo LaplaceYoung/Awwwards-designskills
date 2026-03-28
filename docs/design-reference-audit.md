@@ -1,91 +1,69 @@
 ﻿# Design Reference Audit Map
 
-> 生成时间：2026-03-28  
-> 目的：为二次复查提供“页面模块 -> 参考网站 -> 本地证据”的可追溯映射。
+生成时间：2026-03-28
 
-## 1) 零样本默认策略（已生效）
+本文档用于复查“本地页面模块 -> 参考网站设计语言 -> 迁移实现”的映射关系。
 
-- 默认策略：`top-score + current-year`
-- 解释：当用户未指定参考网站时，自动采用“本年度高分网站”作为复刻基准。
-- 验证文件：
-  - `output/awwwards-design-selector/candidates.shortlist.zero-default.json`
-  - 其中榜首：`gq-ap-the-extraordinary-lab`，评分 `7.74`，参考站 `https://www.gq.com/sponsored/story/the-extraordinary-lab`
+## 1. 当前主参考站
 
-## 2) 参考站点总览
-
-| 参考站ID | 站点URL | 主要用于 |
+| 参考站 | URL | 用途 |
 | --- | --- | --- |
-| `gq-ap-the-extraordinary-lab` | `https://www.gq.com/sponsored/story/the-extraordinary-lab` | `wuhan-tourism-v1`（零样本默认风格）、`whu-promo-gq-hifi`（主迁移） |
-| `shed` | `https://shed.design/` | `whu-promo-shed-hifi`（历史基线/Before 对比） |
+| Better Off THE LOOKBACK | `https://tlb.betteroff.studio/` | `docs/index.html` 的主复刻参考（结构、交互、动效、视觉节奏） |
 
-## 3) 武汉旅游页（wuhan-tourism-v1）模块映射
+本轮已在 `output/awwwards-design-selector/reference-evidence/tlb-betteroff-live/` 保存真实访问证据：
 
-页面文件：`output/awwwards-design-selector/wuhan-tourism-v1/index.html`
+- `desktop-fullpage.png`
+- `mobile-fullpage.png`
+- `timeline/*.png`
+- `interactions/*.png`
+- `evidence.json`
 
-| 本地模块 | 位置锚点 | 参考网站 | 复刻说明 |
+## 2. 首页模块映射（TLB -> 武汉版）
+
+页面文件：`docs/index.html`
+
+| 本地模块 | 参考站模块 | 复刻点 | 武汉化改造 |
 | --- | --- | --- | --- |
-| Hero 沉浸首屏 + 文案大标题 | `<div class="hero">` | GQ 榜一站点 | 采用编辑式大标题 + 视觉主图开场节奏 |
-| Topbar + 锚点导航 | `<header class="topbar">` | GQ 榜一站点 | 轻量导航覆盖在视觉背景上 |
-| 三列亮点卡片 | `<section id="highlights">` | GQ 榜一站点 | 栏目化卡片信息密度与视觉节奏 |
-| 路线时间线 | `<section id="routes">` | GQ 榜一站点（适配） | 将专栏叙事节奏迁移为“时间轴行文” |
-| 咨询表单 | `<section id="contact">` | GQ 榜一站点（适配） | 保留叙事页收束到 CTA 的结构逻辑 |
-| Reveal + Hero Parallax | `script.js` | GQ 榜一站点（动效语言） | 采用滚动触发显现与轻量视差过渡 |
+| 顶部左侧菜单（Timeline/Surf/Index/About） | 顶部左侧路由菜单 | 文本导航、轻量 hover 强调、路由状态高亮 | 菜单保留原路由词，内容落地到武汉叙事章节 |
+| 右侧月份索引双列 | 右侧年度索引信息墙 | 高密度等宽信息列表、固定在右侧 | 保留格式与节奏，改为武汉宣传语境的数据标签 |
+| 门禁首屏（Enter with sound / ...or without） | 首屏进入门禁 | 居中超大标题 + 声音入口 + 无声入口 | 标题改为“武汉城市档案 THE LOOKBACK (WH®)/2026”，音频替换为本地武汉氛围音轨 |
+| 超大无衬线标题层级 | 原站巨型 display 标题 | 黑白高对比、紧凑字距、强层级 | 中文主文案优先，保留英文字母块节奏 |
+| 路由切换转场 | 原站页面切换过渡 | 切换时淡入/位移，主题色切换 | `timeline/index` 用浅底，`surf/about` 用暗底，增强章节区分 |
+| 滚动 reveal 与 hero 动效 | 原站滚动叙事动效 | GSAP + ScrollTrigger 做 section reveal 和 hero 轻 pin/scrub | 映射到武汉卡片、数据模块和说明块 |
+| 卡片 hover / click 反馈 | 原站 hover 与点击状态变化 | 卡片轻倾斜、按钮按压、点击冲击波（impact ring） | 作用于武汉图文卡与信息卡 |
+| 跑马灯关键词带 | 原站连续滚动信息带 | 横向连续滚动文本 | 文案替换为“武汉/光谷/东湖/长江主轴”等关键词 |
 
-媒体来源：`output/awwwards-design-selector/wuhan-tourism-v1/assets-map.json`
+## 3. 媒体与音频替换清单（武汉意图）
 
-## 4) 武汉大学页（whu-promo-gq-hifi）模块映射
+目录：`docs/assets/tlb-wuhan/`
 
-页面文件：`output/awwwards-design-selector/whu-promo-gq-hifi/index.html`
+- 图片：
+  - `wuhan-skyline.jpg`
+  - `yellow-crane.jpg`
+  - `east-lake.jpg`
+  - `whu-hero-1.jpg`
+  - `whu-hero-2.jpg`
+  - `whu-hero-3.jpg`
+  - `wuhan.jpg`
+  - `yellow_crane_tower.jpg`
+- 音频：
+  - `wuhan-ambient.wav`（本地循环背景音）
 
-| 本地模块 | 位置锚点 | 参考网站 | 复刻说明 |
-| --- | --- | --- | --- |
-| Topbar + Overlay Menu | `header.topbar` / `nav.overlay-menu` | GQ 榜一站点 | 全屏目录切换 + 顶部轻量导航 |
-| Hero 多图轮播 + 大标题 | `section#about.hero` | GQ 榜一站点 | 大开场叙事视觉 + 文案前导 |
-| Chapter Intro 段落 | `section.chapter-intro` | GQ 榜一站点 | 章节间缓冲文本，强化长滚阅读感 |
-| Narrative 双章节 Story Block | `section#narrative` | GQ 榜一站点 | 章节式滚动叙事结构（Chapter 01/02） |
-| Research 栏目卡片 | `section#research` | GQ 榜一站点 | 信息栏目化、三卡并行节奏 |
-| Index Strip + Marquee | `section#index.index-strip` | GQ 榜一站点 + 迁移适配 | 滚动字幕/指标条保持运动连续性 |
-| Stories 图集区 | `section#stories` | GQ 榜一站点 | 图片驱动叙事卡组 |
-| Contact 收束区 | `section#contact` | GQ 榜一站点（适配） | 叙事末端表单 CTA |
-| Scroll Rail + Chapter Meter | `#scrollRailThumb` / `#chapterMeter` | GQ 榜一站点（动效强化） | 章节进度感知与滚动反馈 |
-| Preloader / Reveal / Parallax / Menu Lock | `script.js` | GQ 榜一站点（动效语言） | 首屏加载、章节激活、滚动反馈、菜单锁滚 |
-
-媒体来源：`output/awwwards-design-selector/whu-promo-gq-hifi/assets-map.json`
-
-## 5) 前后对比映射（用于复查）
-
-| 版本 | 页面目录 | 主要参考站 |
-| --- | --- | --- |
-| Before | `output/awwwards-design-selector/whu-promo-shed-hifi/` | Shed |
-| After | `output/awwwards-design-selector/whu-promo-gq-hifi/` | GQ 榜一 |
-
-对比图：`output/awwwards-design-selector/comparisons/whu-before-after/whu-before-after-side-by-side.jpg`
-
-## 6) 复验命令
+## 4. 可复验命令
 
 ```bash
-# 1) 验证零样本默认策略
-node scripts/rank_and_select.js \
-  --in output/awwwards-design-selector/candidates.analyzed.today-live.json \
-  --out output/awwwards-design-selector/candidates.shortlist.zero-default.json \
-  --brief output/awwwards-design-selector/selection-brief.zero-default.md \
-  --min 5 --threshold 70
+# 1) 参考站证据抓取
+node scripts/capture_no_recording_evidence.js --url "https://tlb.betteroff.studio/" --site-id tlb-betteroff-live --frames 12
 
-# 2) 武汉大学页 fidelity（GQ profile）
-node scripts/review_replica_fidelity.js \
-  --page output/awwwards-design-selector/whu-promo-gq-hifi \
-  --profile gq \
-  --reference output/awwwards-design-selector/reference-gq-structure.json \
-  --assets output/awwwards-design-selector/whu-promo-gq-hifi/assets-map.json \
-  --intent "wuhan university campaign" \
-  --threshold 90
+# 2) 首页烟测
+node scripts/pre_delivery_smoke_test.js --page docs --out docs/pre-delivery-smoke.json
 
-# 3) 页面 smoke
-node scripts/pre_delivery_smoke_test.js --page output/awwwards-design-selector/wuhan-tourism-v1
-node scripts/pre_delivery_smoke_test.js --page output/awwwards-design-selector/whu-promo-gq-hifi
+# 3) Demo 烟测
+node scripts/pre_delivery_smoke_test.js --page docs/demos/whu-promo-gq-hifi --out docs/demos/whu-promo-gq-hifi/pre-delivery-smoke.json
+node scripts/pre_delivery_smoke_test.js --page docs/demos/wuhan-tourism-v1 --out docs/demos/wuhan-tourism-v1/pre-delivery-smoke.json
 ```
 
-## 7) 备注
+## 5. 说明
 
-- 复刻以“结构/动效/视觉语言相似”为目标，不直接复制受版权保护的品牌资产。
-- 当业务语义（如“武汉大学/武汉旅游”）与参考站内容冲突时，优先做业务素材替换并保留动效语言。
+- 本仓库复刻目标是“结构/动效/视觉语言相似”，不是拷贝第三方受版权保护品牌资产。
+- 业务迁移优先中文语境和武汉主题素材，保持参考站交互节奏与版式逻辑。
