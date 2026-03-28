@@ -3,105 +3,178 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awwwards Design Skills | Showcase</title>
+    <title>Awwwards Design Skills Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <nav class="hero-nav">
-        <a href="#capabilities" data-click-anim>能力</a>
-        <a href="#prompts" data-click-anim>提示词</a>
-        <a href="#cases" data-click-anim>案例</a>
-        <a href="#tests" data-click-anim>测试</a>
-      </nav>
-      <p class="badge">Awwwards Design Skills</p>
-      <h1>高保真网页复刻与迁移</h1>
-      <p class="lead">
-        从榜单抓取、真实取证、交互拆解、滚动时间线复现到业务化内容迁移，形成可执行、可评分、可迭代的设计工程闭环。
+    <div class="page-shell">
+      <header class="top-nav">
+        <a class="mark" href="#" aria-label="Awwwards Design Skills">◉</a>
+        <a class="nav-btn" href="#aboutBlock" data-panel-target="about" data-click-anim>[ABOUT]</a>
+        <a class="nav-btn" href="#projectsBlock" data-panel-target="projects" data-click-anim>[PROJECTS]</a>
+        <a class="nav-btn" href="#contactBlock" data-panel-target="contact" data-click-anim>[CONTACT]</a>
+        <div class="lang-switch" aria-label="language switch">
+          <button class="lang-btn is-on" data-lang="zh" data-click-anim>[ZH]</button>
+          <button class="lang-btn" data-lang="en" data-click-anim>[EN]</button>
+        </div>
+      </header>
+
+      <main class="hero-stage">
+        <h1 class="brand-title">Awwwards Design Skills Studio</h1>
+
+        <article
+          class="float-card left-top"
+          data-title-zh="武汉大学 · 叙事宣传页"
+          data-title-en="WHU Narrative Campaign"
+          data-tag="[WHU][CN]"
+          data-image="./demos/whu-promo-gq-hifi/assets/whu-hero-1.jpg"
+          data-click-anim
+        >
+          <img src="./demos/whu-promo-gq-hifi/assets/whu-hero-1.jpg" alt="武汉大学宣传页素材" />
+          <span class="float-label">[WHU][CN]</span>
+        </article>
+
+        <article
+          class="float-card left-mid"
+          data-title-zh="交互证据 · 点击三帧采集"
+          data-title-en="Interaction Evidence Capture"
+          data-tag="[MOTION][DATA]"
+          data-image="./assets/test-whu-home.png"
+          data-click-anim
+        >
+          <img src="./assets/test-whu-home.png" alt="交互测试截图" />
+          <span class="float-label">[MOTION][DATA]</span>
+        </article>
+
+        <article
+          class="float-card right-top"
+          data-title-zh="武汉旅游 · 城市宣传页"
+          data-title-en="Wuhan Tourism Campaign"
+          data-tag="[CITY][TOURISM]"
+          data-image="./demos/wuhan-tourism-v1/assets/wuhan-skyline.jpg"
+          data-click-anim
+        >
+          <img src="./demos/wuhan-tourism-v1/assets/wuhan-skyline.jpg" alt="武汉旅游宣传页素材" />
+          <span class="float-label">[CITY][TOURISM]</span>
+        </article>
+
+        <article
+          class="float-card right-mid"
+          data-title-zh="自动评分 · 90+ 闸门"
+          data-title-en="Automated Fidelity Gate"
+          data-tag="[QA][90+]"
+          data-image="./assets/test-docs-home.png"
+          data-click-anim
+        >
+          <img src="./assets/test-docs-home.png" alt="首页测试截图" />
+          <span class="float-label">[QA][90+]</span>
+        </article>
+
+        <article
+          class="float-card left-bottom"
+          data-title-zh="设计映射 · 二次复查"
+          data-title-en="Design Reference Audit"
+          data-tag="[AUDIT][MAP]"
+          data-image="./assets/whu-before-after.jpg"
+          data-click-anim
+        >
+          <img src="./assets/whu-before-after.jpg" alt="前后对比图" />
+          <span class="float-label">[AUDIT][MAP]</span>
+        </article>
+
+        <article
+          class="float-card right-bottom"
+          data-title-zh="无录屏模式 · 实站抓取"
+          data-title-en="No-Recording Reconstruction"
+          data-tag="[LIVE][MCP]"
+          data-image="./assets/test-wuhan-home.png"
+          data-click-anim
+        >
+          <img src="./assets/test-wuhan-home.png" alt="武汉旅游测试截图" />
+          <span class="float-label">[LIVE][MCP]</span>
+        </article>
+
+        <section class="focus-board">
+          <img id="focusImage" src="./demos/whu-promo-gq-hifi/assets/whu-hero-2.jpg" alt="核心展示图" />
+          <div class="focus-meta">
+            <p class="focus-kicker" id="focusKicker">[PROMO][ACTIVE]</p>
+            <h2 id="focusTitle" data-zh="武汉大学 · 叙事宣传页" data-en="WHU Narrative Campaign">武汉大学 · 叙事宣传页</h2>
+          </div>
+        </section>
+      </main>
+
+      <section class="info-block" id="aboutBlock">
+        <h3>[ABOUT]</h3>
+        <p>
+          Awwwards Design Skills focuses on high-fidelity website reconstruction and business adaptation.
+          The workflow is explicit: reference capture, interaction decomposition, implementation, browser verification, and iteration.
+        </p>
+      </section>
+
+      <section class="info-block" id="projectsBlock">
+        <h3>[PROJECTS]</h3>
+        <p>
+          Featured outputs: Wuhan University narrative campaign page, Wuhan tourism promotional page,
+          and a reusable no-recording reconstruction pipeline with click and scroll timeline audits.
+        </p>
+      </section>
+
+      <section class="info-block" id="contactBlock">
+        <h3>[CONTACT]</h3>
+        <p>
+          Repository:
+          <a href="https://github.com/LaplaceYoung/Awwwards-designskills" target="_blank" rel="noreferrer">
+            LaplaceYoung/Awwwards-designskills
+          </a>
+        </p>
+      </section>
+
+      <footer class="bottom-nav">
+        <a href="./README.md" data-click-anim>[README]</a>
+        <a href="./test-report.md" data-click-anim>[TESTS]</a>
+        <a href="./design-reference-audit.md" data-click-anim>[AUDIT]</a>
+        <a href="./demos/whu-promo-gq-hifi/index.html" data-click-anim>[WHU DEMO]</a>
+        <a href="./demos/wuhan-tourism-v1/index.html" data-click-anim>[TOURISM DEMO]</a>
+        <a href="https://github.com/LaplaceYoung/Awwwards-designskills" target="_blank" rel="noreferrer" data-click-anim>[GITHUB]</a>
+      </footer>
+    </div>
+
+    <dialog class="panel" id="aboutPanel">
+      <button class="panel-close" data-close-panel data-click-anim>[CLOSE]</button>
+      <h3>About</h3>
+      <p data-i18n-zh="Awwwards Design Skills 聚焦高保真复刻与业务迁移。我们把网页设计拆成可执行工程步骤：抓取、取证、复刻、评分、迭代。"
+         data-i18n-en="Awwwards Design Skills focuses on high-fidelity replication and business adaptation. The workflow is operational: capture, evidence, reconstruction, scoring, and iteration.">
+        Awwwards Design Skills 聚焦高保真复刻与业务迁移。我们把网页设计拆成可执行工程步骤：抓取、取证、复刻、评分、迭代。
       </p>
-      <a class="cta" href="https://github.com/LaplaceYoung/Awwwards-designskills" target="_blank" rel="noreferrer" data-click-anim>查看 GitHub 仓库</a>
-    </header>
+    </dialog>
 
-    <main>
-      <section id="capabilities">
-        <h2>核心能力</h2>
-        <div class="feature-grid">
-          <article class="card"><h3>真实外链抓取</h3><p>优先使用真实目标站点而非导航页，确保复刻依据准确。</p></article>
-          <article class="card"><h3>无录屏取证</h3><p>自动采集 desktop/mobile 全页、滚动帧、点击三帧、交互分类与动效线索。</p></article>
-          <article class="card"><h3>90+ 评分闭环</h3><p>组件、内容、动效、点击、滚动、导航与媒体适配统一进入自动评审。</p></article>
-        </div>
-      </section>
+    <dialog class="panel" id="projectsPanel">
+      <button class="panel-close" data-close-panel data-click-anim>[CLOSE]</button>
+      <h3>Projects</h3>
+      <ul>
+        <li>Wuhan University Narrative Campaign</li>
+        <li>Wuhan Tourism Promo 1.0</li>
+        <li>No-Recording Evidence Reconstruction</li>
+      </ul>
+    </dialog>
 
-      <section id="prompts">
-        <h2>最佳实践提示词</h2>
-        <article class="prompt-block">
-          <h3>1.0 样本提示：武汉市旅游宣传页</h3>
-          <pre><code>请使用 awwwards-design-selector 技能生成“武汉市旅游宣传页面 1.0”。
-要求：
-1) 中文优先，包含 Hero、亮点卡片、一日路线、咨询表单；
-2) 至少 3 张武汉旅游相关图片（黄鹤楼/东湖/长江夜景）；
-3) 首次交付前必须跑 smoke test 并输出截图。
-（零样本默认：复刻本年度高分网站设计语言）
-输出目录：output/awwwards-design-selector/wuhan-tourism-v1/</code></pre>
-        </article>
-        <article class="prompt-block">
-          <h3>2. 迭代提示：武汉大学宣传页增强</h3>
-          <pre><code>请基于已有武汉大学宣传页继续精进，并保持参考站动效语言。
-任务：
-1) 强化章节滚动叙事与点击反馈；
-2) 替换业务相关媒体素材；
-3) 输出 before/after 对比截图；
-4) 提供 fidelity 与 smoke 验证结果。
-输出目录：output/awwwards-design-selector/whu-promo-gq-hifi/</code></pre>
-        </article>
-      </section>
+    <dialog class="panel" id="contactPanel">
+      <button class="panel-close" data-close-panel data-click-anim>[CLOSE]</button>
+      <h3>Contact</h3>
+      <p>
+        GitHub:
+        <a href="https://github.com/LaplaceYoung/Awwwards-designskills" target="_blank" rel="noreferrer">
+          LaplaceYoung/Awwwards-designskills
+        </a>
+      </p>
+    </dialog>
 
-      <section id="cases">
-        <h2>案例结果</h2>
-        <div class="case-grid">
-          <figure>
-            <img src="./assets/wuhan-tourism-fullpage.png" alt="武汉旅游宣传页" />
-            <figcaption>武汉旅游宣传页（Smoke PASS）</figcaption>
-            <a class="demo-link" href="./demos/wuhan-tourism-v1/index.html" target="_blank" rel="noreferrer" data-click-anim>打开 Demo</a>
-          </figure>
-          <figure>
-            <img src="./assets/whu-before-after.jpg" alt="武汉大学页面前后对比图" />
-            <figcaption>武汉大学宣传页（高保真迁移版）</figcaption>
-            <a class="demo-link" href="./demos/whu-promo-gq-hifi/index.html" target="_blank" rel="noreferrer" data-click-anim>打开 Demo</a>
-          </figure>
-        </div>
-      </section>
-
-      <section id="tests">
-        <h2>测试截图</h2>
-        <div class="case-grid">
-          <figure>
-            <img src="./assets/test-docs-home.png" alt="展示首页测试截图" />
-            <figcaption>展示首页 smoke 截图</figcaption>
-          </figure>
-          <figure>
-            <img src="./assets/test-whu-home.png" alt="武汉大学页面测试截图" />
-            <figcaption>武汉大学页面 smoke 截图</figcaption>
-          </figure>
-          <figure>
-            <img src="./assets/test-wuhan-home.png" alt="武汉旅游页面测试截图" />
-            <figcaption>武汉旅游页面 smoke 截图</figcaption>
-          </figure>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>Awwwards Design Skills · GitHub Pages Showcase</p>
-      <p><a class="demo-link" href="./design-reference-audit.md" target="_blank" rel="noreferrer" data-click-anim>设计参考映射文档</a></p>
-      <p><a class="demo-link" href="./test-report.md" target="_blank" rel="noreferrer" data-click-anim>测试报告</a></p>
-    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
